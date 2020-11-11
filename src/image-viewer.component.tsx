@@ -423,9 +423,14 @@ export default class ImageViewer extends React.Component<Props, State> {
       this.height = event.nativeEvent.layout.height;
       this.styles = styles(this.width, this.height, this.props.backgroundColor || 'transparent');
 
+      //emc
+      this.fadeAnim.setValue(0)
       // 强制刷新
       this.forceUpdate();
       this.jumpToCurrentImage();
+
+      //emc
+      this.fadeAnim.setValue(1)
     }
   };
 
